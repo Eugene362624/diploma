@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { app } from 'electron'
 import * as fs from 'fs'
-import path = require('path')
+import * as path from 'path'
 import { Sequelize } from 'sequelize'
 import { EncryptAES } from './utils/encrypt'
 import { DecryptAES } from './utils/decrypt'
@@ -10,7 +10,7 @@ import { IAnswer, IQuestion, ITest } from './interfaces'
 class DatabaseModule {
   connection!: Sequelize
   dataPath: string
-  encryptKey = 'Eugene362624'
+  encryptKey = ''
   constructor() {
     this.connection = new Sequelize('database', '', '', {
       dialect: 'sqlite',
