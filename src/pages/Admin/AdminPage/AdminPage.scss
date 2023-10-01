@@ -1,0 +1,15 @@
+@import '../../../scss/abstract/functions';
+@import '../../../scss/abstract/variables';
+
+.adminpage__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-gap: toRem(16);
+  height: fit-content;
+  .ant-card-body {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

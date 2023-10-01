@@ -1,0 +1,400 @@
+@import '../abstract/functions';
+@import '../abstract/variables';
+
+.ant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.ant-btn-icon-only {
+    min-width: toRem(32);
+  }
+}
+
+.ant-card {
+  filter: drop-shadow(0 0 16px rgba(#000, 0.1));
+  height: fit-content;
+  .ant-card-head {
+    .ant-card-head-wrapper {
+      .ant-card-head-title {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.ant-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 16px;
+  width: 100%;
+  .ant-btn {
+    margin-inline-start: 0 !important;
+  }
+}
+
+.ant-modal-confirm-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-form-item-row {
+  align-items: flex-start;
+  .ant-form-item-label {
+    font-weight: bold;
+  }
+}
+
+.ant-form-item-control-input-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// .ant-btn {
+//     border-width: toVw(1);
+//     border-radius: toVw(0.5*$fontBaseValue);
+//     display: flex;
+//     align-items: center;
+//     font-size: toVw(.9*$fontBaseValue);
+//     height: toVw(2*$fontBaseValue);
+//     padding: toVw(.25*$fontBaseValue) toVw($fontBaseValue);
+//     &.active {
+//         border-color: #4096ff;
+//         svg {
+//             color: #4096ff;
+//         }
+//     }
+//     &:hover {
+//         opacity: .8;
+//         svg {
+//             color: #4096ff;
+//         }
+//     }
+//     svg {
+//         width: toVw(1.5*$fontBaseValue);
+//         height: toVw(1.5*$fontBaseValue);
+//         color: #d9d9d9;
+//         transition: color .2s ease;
+//     }
+// }
+
+// .ant-modal-wrap {
+//     .ant-modal {
+//         .ant-modal-body {
+//             img {
+//                 width: 100%;
+//             }
+
+//         }
+//     }
+
+//     .developer-modal__body {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//     }
+
+//     .ant-modal-confirm-btns {
+//         display: flex;
+//         justify-content: flex-end;
+//     }
+// }
+
+// .ant-card {
+//     border: toVw(.1*$fontBaseValue);
+//     border-radius: toVw(.5*$fontBaseValue);
+//     height: fit-content;
+//     filter: drop-shadow(0 0 toVw($fontBaseValue) rgba(0, 0, 0, 0.2));
+//     @include Divider;
+//     .ant-card-head {
+//         min-height: toVw(4*$fontBaseValue);
+//         padding: toVw(2*$fontBaseValue);
+//         .ant-card-head-wrapper {
+//             .ant-card-head-title {
+//                 font-size: toVw(1.5*$fontBaseValue);
+//             }
+//         }
+//     }
+//     .ant-card-body {
+//         padding: toVw(2*$fontBaseValue);
+//         border-radius: toVw(.5*$fontBaseValue);
+//         .ant-radio-group {
+//             * {
+//                 font-size: toVw(1.25*$fontBaseValue);
+//             }
+//         }
+//         .ant-form {
+//             .ant-form-item {
+//                 margin-bottom: toVw(1.5*$fontBaseValue);
+//                 * {
+//                     font-size: toVw(1.25*$fontBaseValue);
+//                 }
+//                 &:nth-last-of-type(1) {
+//                     margin-bottom: 0;
+//                 }
+//                 .ant-row {
+
+//                 }
+//                 .ant-btn {
+//                     height: toVw(3*$fontBaseValue);
+//                     padding: 0 toVw(1*$fontBaseValue);
+//                     display: flex;
+//                     align-items: center;
+//                     span {
+//                         font-size: toVw(1*$fontBaseValue);
+
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .ant-form {
+//         font-size: toVw(0.9*$fontBaseValue);
+//         line-height: toVw(1.1*$fontBaseValue);
+//     .ant-form-item {
+//         font-size: toVw(0.9*$fontBaseValue);
+//         line-height: toVw(1.1*$fontBaseValue);
+//         margin-bottom: toVw(1.5*$fontBaseValue);
+//         .ant-row {
+//             display: flex;
+//             flex-wrap: nowrap;
+//             column-gap: toVw($fontBaseValue);
+//             font-size: toVw(0.9*$fontBaseValue);
+//             line-height: toVw(1.1*$fontBaseValue);
+//             .ant-btn.active {
+//                 color: #4096ff;
+//             }
+//             &:not(:nth-last-of-type(1)) {
+//                 margin-bottom: toVw($fontBaseValue);
+//             }
+//             .ant-col {
+//                 padding: 0 0 toVw(.5*$fontBaseValue);
+//                 font-size: toVw(0.9*$fontBaseValue);
+//                 line-height: toVw(1.1*$fontBaseValue);
+//                 min-height: toVw(.1*$fontBaseValue);
+//                 &.ant-form-item-label {
+//                     .ant-form-item-required {
+//                         &::before {
+//                             margin-inline-end: toVw(.25*$fontBaseValue);
+//                             font-size: toVw(.8*$fontBaseValue);
+//                         }
+//                         font-size: toVw(.8*$fontBaseValue);
+//                     }
+//                     label {
+//                         font-size: toVw(.8*$fontBaseValue);
+//                     }
+//                 }
+//                 .ant-form-item-control-input {
+//                     min-height: toVw(2*$fontBaseValue);
+//                     .ant-form-item-control-input-content {
+//                         .ant-input {
+//                             padding: toVw(.25*$fontBaseValue) toVw(.75*$fontBaseValue);
+//                             font-size: toVw(0.9*$fontBaseValue);
+//                             line-height: toVw(1.1*$fontBaseValue);
+//                             border-width: toVw(.1*$fontBaseValue);
+//                             border-radius: toVw(.5*$fontBaseValue);
+//                         }
+//                         .ant-btn-dashed {
+//                             box-shadow: 0 toVw(.1*$fontBaseValue) 0 rgba($color: #000000, $alpha: .02);
+//                             height: toVw(2*$fontBaseValue);
+//                             font-size: toVw(0.9*$fontBaseValue);
+//                             line-height: toVw(1.1*$fontBaseValue);
+//                             padding: toVw(.25*$fontBaseValue) toVw(1*$fontBaseValue);
+//                             display: flex;
+//                             align-items: center;
+//                             justify-content: center;
+//                             .ant-btn-icon {
+//                                 width: toVw(1.25*$fontBaseValue);
+//                                 height: toVw(1.25*$fontBaseValue);
+//                                 margin-inline-end: toVw(.5*$fontBaseValue);
+//                                 .anticon, svg {
+//                                     width: 100%;
+//                                     height: 100%;
+//                                 }
+//                             }
+//                         }
+//                         .ant-upload-wrapper {
+//                             font-size: toVw(0.9*$fontBaseValue);
+//                             line-height: toVw(1.1*$fontBaseValue);
+//                             .ant-upload-drag {
+//                                 border: #d9d9d9 dashed toVw(.1*$fontBaseValue);
+//                                 .ant-upload-btn {
+//                                     padding: toVw($fontBaseValue) toVw(.2*$fontBaseValue);
+//                                     .ant-upload-drag-container {
+//                                         .ant-upload-drag-icon {
+//                                             margin-bottom: toVw($fontBaseValue);
+//                                             .anticon {
+//                                                 font-size: toVw(3*$fontBaseValue);
+//                                                 svg {
+//                                                     width: toVw(4*$fontBaseValue);
+//                                                     height: toVw(4*$fontBaseValue);
+//                                                 }
+//                                             }
+//                                         }
+//                                         .ant-upload-text {
+//                                             font-size: toVw($fontBaseValue);
+//                                             margin: 0 0 toVw(.25*$fontBaseValue);
+//                                         }
+//                                         .ant-upload-hint {
+//                                             font-size: toVw(.8*$fontBaseValue);
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                             .ant-upload-list {
+//                                 .ant-upload-list-item-container {
+//                                     .ant-upload-list-item {
+//                                         border-radius: toVw(.25*$fontBaseValue);
+//                                         height: fit-content;
+//                                         margin-top: toVw(.5*$fontBaseValue);
+//                                         font-size: toVw(1*$fontBaseValue);
+//                                         padding: toVw(.25*$fontBaseValue) toVw(.5*$fontBaseValue);
+//                                         .ant-upload-icon {
+//                                             display: flex;
+//                                             align-items: center;
+//                                             svg {
+//                                                 width: toVw($fontBaseValue);
+//                                                 height: toVw($fontBaseValue);
+//                                             }
+//                                         }
+//                                         .ant-upload-list-item-name {
+//                                             padding: 0 toVw(.5*$fontBaseValue);
+//                                         }
+//                                         .ant-upload-list-item-actions {
+//                                             .ant-btn {
+//                                                 height: toVw(1.5*$fontBaseValue);
+//                                                 width: toVw(1.5*$fontBaseValue);
+//                                             }
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                         .ant-collapse {
+//                             width: 100%;
+//                             border-radius: toVw(.5*$fontBaseValue);
+//                             font-size: toVw(0.9*$fontBaseValue);
+//                             line-height: toVw(1.1*$fontBaseValue);
+//                             padding: 0 0;
+//                             height: fit-content;
+//                             border: toVw(0.1*$fontBaseValue) solid #d9d9d9;
+
+//                             .ant-collapse-header {
+//                                 border-radius: 0 0 toVw(0.5*$fontBaseValue) toVw(0.5*$fontBaseValue);
+//                                 padding: toVw(0.75*$fontBaseValue) toVw(1*$fontBaseValue);
+//                                 display: flex;
+//                                 align-items: center;
+//                                 .ant-collapse-expand-icon {
+//                                     height: toVw(1.25*$fontBaseValue);
+//                                     padding-inline-end: toVw(0.75*$fontBaseValue);
+//                                     .anticon {
+//                                         font-size: toVw(.75*$fontBaseValue);
+//                                     }
+//                                 }
+//                                 .ant-collapse-header-text {
+//                                     text-align: start;
+//                                 }
+//                                 .ant-collapse-extra {
+//                                     display: flex;
+//                                     .ant-btn {
+//                                         font-size: toVw(.9*$fontBaseValue);
+//                                         height: toVw(2*$fontBaseValue);
+//                                         padding: toVw(.25*$fontBaseValue) toVw(1*$fontBaseValue);
+//                                         border: toVw(.1*$fontBaseValue) solid #d9d9d9;
+//                                         display: flex;
+//                                         align-items: center;
+//                                         svg {
+//                                             color: #d9d9d9;
+//                                         }
+//                                         &:not(.disabled):hover {
+//                                             * {
+//                                                 color: #4096ff;
+
+//                                             }
+//                                             border-color: #4096ff;
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                             .ant-collapse-content {
+//                                 border-top: toVw(.1*$fontBaseValue) solid #d9d9d9;
+//                                 border-radius: 0 0 toVw(.5*$fontBaseValue) toVw(.5*$fontBaseValue);
+//                                 .ant-collapse-content-box {
+//                                     .ant-form-item {
+//                                         width: 100%;
+//                                     }
+//                                 }
+//                             }
+//                             .ant-collapse-item {
+//                                 margin-bottom: toVw(.1*$fontBaseValue);
+//                                 border-bottom: toVw(.1*$fontBaseValue) solid #d9d9d9;
+//                                 &:nth-last-of-type(1) {
+//                                     border-bottom: unset;
+//                                     margin-bottom: 0;
+//                                     border-radius: toVw(0.5*$fontBaseValue) toVw(0.5*$fontBaseValue);
+//                                 }
+//                                 .ant-collapse-content-box {
+//                                     padding: toVw($fontBaseValue) toVw($fontBaseValue);
+//                                     display: flex;
+//                                     flex-direction: column;
+//                                     align-items: flex-start;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//     }
+// }
+
+// .ant-tooltip {
+//     .ant-tooltip-content {
+//         .ant-tooltip-inner {
+//             min-width: toVw(2*$fontBaseValue);
+//             min-height: toVw(2*$fontBaseValue);
+//             padding: toVw(.4*$fontBaseValue) toVw(.5*$fontBaseValue);
+//             border-radius: toVw(.4*$fontBaseValue);
+//             font-size: toVw(.9*$fontBaseValue);
+//             box-shadow: 0 toVw(.4*$fontBaseValue) toVw($fontBaseValue) 0 rgba(0, 0, 0, 0.08), 0 toVw(.2*$fontBaseValue) toVw(.4*$fontBaseValue) toVw(-.25*$fontBaseValue) rgba(0, 0, 0, 0.12), 0 toVw(.5*$fontBaseValue) toVw(1.75*$fontBaseValue) toVw(.5*$fontBaseValue) rgba(0, 0, 0, 0.05);
+//         }
+//     }
+// }
+
+// .ant-modal-root {
+//     .ant-modal-mask {
+
+//     }
+//     .ant-modal-wrap {
+//         .ant-modal {
+//             padding-bottom: toVw(1.5*$fontBaseValue);
+//             top: toVw(100);
+//             .ant-modal-content {
+//                 padding: toVw(1.25*$fontBaseValue) toVw(1.5*$fontBaseValue);
+//                 border-radius: toVw(.5*$fontBaseValue);
+//                 box-shadow: 0 toVw(.4*$fontBaseValue) toVw(1*$fontBaseValue) 0 rgba(0, 0, 0, 0.08), 0 toVw(.2*$fontBaseValue) toVw(.4*$fontBaseValue) toVw(-.25*$fontBaseValue) rgba(0, 0, 0, 0.12), 0 toVw(.6*$fontBaseValue) toVw(1.75*$fontBaseValue) toVw(.5*$fontBaseValue) rgba(0, 0, 0, 0.05);
+//                 .ant-modal-header {
+//                     margin-bottom: toVw(.5*$fontBaseValue);
+//                     .ant-modal-title {
+//                         font-size: toVw(1*$fontBaseValue);
+//                     }
+//                 }
+//                 .ant-modal-footer {
+//                     justify-content: flex-end;
+//                     display: flex;
+//                     margin-top: toVw(.75*$fontBaseValue);
+//                 }
+//             }
+//         }
+//     }
+// }

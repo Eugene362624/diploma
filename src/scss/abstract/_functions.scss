@@ -1,0 +1,9 @@
+@import './variables';
+
+@function toVw($pixels) {
+  @return calc($pixels / $viewport-width) * 100vw;
+}
+
+@function toRem($pixels) {
+  @return calc($pixels / $fontBaseValue) + rem; 
+}

@@ -1,0 +1,41 @@
+@import './antd/main';
+@import './reset';
+@import './abstract/functions';
+@import './abstract/variables';
+@import './abstract/mixins';
+@import './fonts';
+
+* {
+  font-family: 'Montserrat', 'sans-serif' !important;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  // display: flex;
+  // justify-content: center;
+}
+
+#app {
+  background-color: #fff;
+  display: flex;
+  // max-width: 1920px;
+}
+
+.content__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: toRem(32);
+  position: relative;
+  padding: toRem(16) toRem(16) toRem(16) toRem(32);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.edit-answer__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(16);
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+@import '../../../scss/abstract/functions';
+@import '../../../scss/abstract/variables';
+
+
+.settingspage__wrapper {
+    .settingspage__toggles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: toVw($fontBaseValue);
+        margin-bottom: toVw(2*$fontBaseValue);
+    }
+    .settingspage__login-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: toVw($fontBaseValue);
+    }
+}

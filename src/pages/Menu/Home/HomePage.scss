@@ -1,0 +1,41 @@
+@import '../../../scss/abstract/functions';
+@import '../../../scss/abstract/variables';
+
+.homepage__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(16);
+
+    .homepage-element {
+        flex: 1;
+    }
+    .homepage__top {
+        flex: 0;
+        display: grid;
+        // grid-template-columns: 1fr 1fr;
+        column-gap: toRem(16);
+    }
+    .homepage__middle {
+        .homepage__middle__content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: toRem(16);
+            column-gap: toRem(16);
+            .ant-card {
+                flex: 1;
+            }
+        }
+    }
+    .homepage__bottom {
+        width: 100%;
+        .homepage__bottom__content {
+            .ant-list-item {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

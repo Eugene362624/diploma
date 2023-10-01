@@ -1,0 +1,44 @@
+@import '../../scss/abstract/functions';
+@import '../../scss/abstract/variables';
+
+.searchbar__wrapper {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    .ant-card-body {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .searchbar__content {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            .searchbar__content-left {
+                display: flex;
+                .ant-btn-group {
+                    margin-right: toRem(32);
+                    display: flex;
+                    align-items: center;
+                    .ant-btn {
+                        width: toRem(32);
+                        height: toRem(32);
+                    }
+                }
+                .searchbar {
+                    // height: toRem(48);
+                    font-size: toRem(16);
+                }
+            }
+            .searchbar__content-right {
+                p {
+                    font-size: toRem(16);
+                }
+            }
+        }
+    }
+}

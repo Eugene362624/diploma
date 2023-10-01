@@ -1,0 +1,7 @@
+@import '../../../scss/abstract/functions';
+
+.edit-test__modal {
+  .ant-form-item-control-input-content {
+    column-gap: toRem(16);
+  }
+}

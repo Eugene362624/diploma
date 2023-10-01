@@ -1,0 +1,53 @@
+@import '../scss/abstract/functions';
+@import '../scss/abstract/variables';
+
+.interactive-layout {
+  padding: toRem(16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  .left-top {
+    position: absolute;
+    top: toRem(16);
+    left: toRem(16);
+    z-index: 2;
+  }
+  .left-bottom {
+    position: absolute;
+    bottom: toRem(16);
+    left: toRem(16);
+    z-index: 2;
+  }
+  .right-top {
+    position: absolute;
+    top: toRem(16);
+    right: toRem(16);
+    z-index: 2;
+  }
+  .right-bottom {
+    position: absolute;
+    bottom: toRem(64);
+    right: 0;
+    z-index: 2;
+  }
+  .bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: toRem(16);
+  }
+  .interactive-layout__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pdf-frame {
+    width: 100vw;
+    height: 100vh;
+  }
+}

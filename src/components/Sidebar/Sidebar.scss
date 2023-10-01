@@ -1,0 +1,198 @@
+@import '../../scss/abstract/variables';
+@import '../../scss/abstract/functions';
+
+.sidebar__wrapper {
+    margin: toRem(16);
+    margin-right: 0;
+    // BUG i need to use .3 insted of .2 like on child elements because if im use .2s it's lagging.,
+    transition: width .3s ease;
+    display: flex;
+    width: toRem(88);
+    border-radius: toRem(8);
+    height: calc(100vh - toRem(32));
+    background: linear-gradient(-135deg, $primaryBlue, $primaryPurple);
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    will-change: transform;
+    z-index: 2;
+    filter: drop-shadow(0 0 toRem(16) rgba(0, 0, 0, 0.3));
+
+    .sidebar__top {
+        display: flex;
+        padding: toRem(16);
+        align-items: center;
+        overflow: hidden;
+
+        img {
+            height: toRem(56);
+            height: toRem(56);
+        }
+
+        .sidebar__top__appname-wrapper {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            opacity: 0;
+            margin-left: toRem(16);
+            transition: opacity .2s ease;
+            height: toRem(48);
+            width: 100%;
+            justify-content: center;
+
+            span {
+                font-size: toRem(16);
+                font-weight: bold;
+                color: $lightText;
+                white-space: nowrap;
+                display: flex;
+                width: 100%;
+            }
+        }
+    }
+
+    .sidebar__menu {
+        margin-top: toRem(80);
+        
+        nav {
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: calc(100vh - toRem(352));
+        }
+
+        .sidebar__link {
+            display: flex;
+            align-items: center;
+            padding: toRem(16) toRem(48) toRem(16) 0;
+            width: 100%;
+            color: $lightText;
+            position: relative;
+            transition: background-color .2s ease;
+            opacity: .8;
+            white-space: nowrap;
+
+            svg {
+                margin-left: toRem(32);
+                width: toRem(24);
+                height: toRem(24);
+                min-width: toRem(24);
+                min-height: toRem(24);
+                transition: transform .2s ease, margin .2s ease;
+            }
+
+            span {
+                opacity: 0;
+                transition: opacity .2s ease;
+                margin-left: toRem(16);
+                font-size: toRem(16);
+            }
+
+            &:not(:nth-last-of-type(1)) {
+                margin-bottom: toRem(16);
+            }
+
+            &:hover {
+                background-color: rgba($hoverBlue, $alpha: .8);
+                svg {
+                    transform: scale(1.1);
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: calc(100% - toRem(4));
+                background: #fff;
+                transition: width .2s ease;
+                border-radius: 0 toRem(8) toRem(8) 0;
+            }
+
+        }
+
+        .sidebar__link_active {
+            opacity: 1;
+            background-color: $hoverBlue;
+            &::before {
+                width: toRem(8);
+            }
+            &:hover {
+                background-color: $hoverBlue;
+            }
+        }
+    }
+
+    .sidebar__hide-button {
+        position: absolute;
+        right: 0;
+        height: toRem(32);
+        width: toRem(32);
+        transform: translateX(50%);
+        bottom: toRem(160);
+
+        svg {
+            transition: transform .5s ease;
+        }
+    }
+
+    .sidebar__hide-button_inverted {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .sidebar__bottom {
+        border-top: toRem(1) solid #4b5ae2;
+        padding: toRem(16);
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .sidebar__exit-button {
+            width: toRem(40);
+            overflow-x: hidden;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: toRem(40);
+            transition: width .2s ease, border-radius .2s ease, border .2s ease, color .2s ease;
+            font-size: toRem(16);
+            border-radius: 50%;
+        }
+    }
+}
+
+.sidebar__wrapper_open {
+    width: toRem(350);
+
+    .sidebar__top {
+        .sidebar__top__appname-wrapper {
+            opacity: 1;
+        }
+    }
+
+    .sidebar__menu {
+
+        .sidebar__link {
+            svg {
+                margin-left: toRem(48);
+            }
+            span {
+                opacity: 1;
+            }
+        }
+    }
+
+    .sidebar__bottom {
+        .sidebar__exit-button {
+            width: 100% !important;
+            border-radius: toRem(8);
+        }
+    }
+}
+
+.developer-modal__body {
+    display: flex;
+    column-gap: toRem(16);
+}
